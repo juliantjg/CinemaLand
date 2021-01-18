@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Menu;
 use App\MoviePost;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class MoviePostsController extends Controller
 {
@@ -32,6 +33,9 @@ class MoviePostsController extends Controller
         $cinema = Menu::find(1);
 
         $imagePath = request('image')->store('uploads', 'public');
+
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1500);
+        $image->save();
 
         $cinema->MoviePosts()->create([
             'menu_id' => '1',
