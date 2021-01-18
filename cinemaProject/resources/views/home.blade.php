@@ -31,7 +31,7 @@
 
     <div class="row pt-3">
         @foreach($cinema->MoviePosts as $moviePost)
-            <div class="col-3">
+            <div class="col-3 pb-5">
                 <img src="/storage/{{ $moviePost->image }}" style="max-width: 230px">
             </div>
         @endforeach
