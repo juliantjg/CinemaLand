@@ -25,7 +25,7 @@
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div><img src="/svg/cinemaLogo.svg" style="height: 40px;" class="pr-3"></div>
-                    <div class="pt-1"><h3><b>CinemLand</b></h3></div>
+                    <div class="pt-1"><h3><b>CinemaLand</b></h3></div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

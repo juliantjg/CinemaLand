@@ -30,10 +30,9 @@
     </div>
 
     <div class="row pt-3">
-        
         @foreach($cinema->MoviePosts as $moviePost)
             <div class="col-3">
-                <img src="/storage/{{ $moviePost->image }}" class="w-90">
+                <img src="/storage/{{ $moviePost->image }}" style="max-width: 230px">
             </div>
         @endforeach
     </div>
