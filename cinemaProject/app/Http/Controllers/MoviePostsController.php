@@ -48,4 +48,9 @@ class MoviePostsController extends Controller
 
         return redirect('/home/');
     }
+
+    public function show($moviePost)
+    {
+        dd($moviePost);
+    }
 }

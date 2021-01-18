@@ -20,4 +20,5 @@ Auth::routes();
 Route::get('/home', 'MenuController@index')->name('home');
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/addMovie/create', 'MoviePostsController@create');
+Route::get('/p/{moviePost}', 'MoviePostsController@show');
 Route::post('/addMovie', 'MoviePostsController@store');
