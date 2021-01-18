@@ -29,14 +29,19 @@ class MoviePostsController extends Controller
             'image' => ['required', 'image'],
         ]);
 
-        if (auth()->user()->role == "admin") {
-            $cinema = Menu::find(1);
+        $cinema = Menu::find(1);
 
-            dd(request('image')->store('uploads', 'public'));
+        $imagePath = request('image')->store('uploads', 'public');
 
-            $cinema->MoviePosts()->create($data);
-        }
+        $cinema->MoviePosts()->create([
+            'menu_id' => '1',
+            'movie_name' => $data['movie_name'],
+            'price' => $data['price'],
+            'url' => $data['url'],
+            'image' => $imagePath
+        ]);
 
-        dd(request()->all());
+
+        return redirect('/home/');
     }
 }
