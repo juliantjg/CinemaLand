@@ -12,7 +12,7 @@
             </div>
             <div class="row pt-3 pl-5">
                 <div class="pl-5">
-                    <button class="btn-dark"><a href=""> Edit Profile </a></button>
+                    <button class="btn-dark"><a href="/profile/{{ $user->id }}/edit"> Edit Profile </a></button>
                 </div>
             </div>
         </div>
