@@ -49,7 +49,7 @@ class MoviePostsController extends Controller
         return redirect('/home/');
     }
 
-    public function show($moviePost)
+    public function show(\App\MoviePost $moviePost)
     {
         dd($moviePost);
     }
