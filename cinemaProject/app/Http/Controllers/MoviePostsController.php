@@ -51,6 +51,6 @@ class MoviePostsController extends Controller
 
     public function show(\App\MoviePost $moviePost)
     {
-        dd($moviePost);
+        return view('posts.show', compact('moviePost'));
     }
 }

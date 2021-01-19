@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-warning shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex" href="{{ url('/home') }}">
                     <div><img src="/svg/cinemaLogo.svg" style="height: 40px;" class="pr-3"></div>
                     <div class="pt-1"><h3><b>CinemaLand</b></h3></div>
                 </a>
