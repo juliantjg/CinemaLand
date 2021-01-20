@@ -18,23 +18,8 @@
                     <div class="col-4"></div>
                     
                 </div>
-
-                <div class="form-group row pt-5">
-                    <label for="name" class="col-md-4 col-form-label text-md-right" style="color: white;">Name :</label>
-    
-                    <div class="col-md-6">
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" 
-                        name="name" value="{{ old('name') ?? $user->name }}" autocomplete="name" autofocus>
-    
-                        @error('name')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                </div>
                 
-                <div class="form-group row">
+                <div class="form-group row pt-5">
                     <label for="description" class="col-md-4 col-form-label text-md-right" style="color: white;">Description :</label>
     
                     <div class="col-md-6">

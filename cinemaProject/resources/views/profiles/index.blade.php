@@ -12,7 +12,9 @@
             </div>
             <div class="row pt-3 pl-5">
                 <div class="pl-5">
-                    <button class="btn-dark"><a href="/profile/{{ $user->id }}/edit"> Edit Profile </a></button>
+                    @can('update', $user->profile)
+                        <button class="btn-dark"><a href="/profile/{{ $user->id }}/edit"> Edit Profile </a></button>
+                    @endcan
                 </div>
             </div>
         </div>
@@ -29,7 +31,7 @@
             
         </div>
         <div class="col-4">
-
+            <h1 style="color: white;">{{ $user->profile->user_id ?? '' }}</h1>
         </div>
     </div>
 </div>
