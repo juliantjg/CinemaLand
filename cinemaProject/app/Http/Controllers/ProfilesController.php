@@ -39,21 +39,16 @@ class ProfilesController extends Controller
 
             $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
             $image->save();
+
+            $imageArray = ['image' => $imagePath];
         }
 
-        // dd(array_merge(
-        //     $data,
-        //     //Rewrite 'image' inside $data with $imagePath
-        //     ['image' => $imagePath],
-        // ));
-
+        //So now we are declaring an imageArray, and if imageArray is empty then $data will be merged with an empty array 
         auth()->user()->profile->update(array_merge(
             $data,
             //Rewrite 'image' inside $data with $imagePath
-            ['image' => $imagePath],
+            $imageArray ?? []
         ));
-
-
 
         return redirect("/profile/{$user->id}");
     }
