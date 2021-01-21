@@ -30,15 +30,22 @@
     </div>
 
     <div class="row pt-3">
-        @foreach($cinema->MoviePosts as $moviePost)
+        @foreach($movieposts as $moviePost)
             <a href="/movie/{{ $moviePost->id }}">
                 <div class="col-3 pb-5">
                     <img src="/storage/{{ $moviePost->image }}" style="max-width: 230px">
+                    
                     <h3 style="color: white;"> {{$moviePost->movie_name}} </h3>
                     <h6 style="color: white;"> ${{$moviePost->price}} </h6>
                 </div>
             </a>
         @endforeach
+    </div>
+    
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            {{ $movieposts->links() }}
+        </div>
     </div>
 </div>
 @endsection

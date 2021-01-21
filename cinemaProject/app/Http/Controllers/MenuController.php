@@ -10,6 +10,7 @@ class MenuController extends Controller
     public function index()
     {
         $cinema = Menu::find(1);
-        return view('home', compact('cinema'));
+        $movieposts = $cinema->MoviePosts()->paginate(8);
+        return view('home', compact('movieposts', 'cinema'));
     }
 }
