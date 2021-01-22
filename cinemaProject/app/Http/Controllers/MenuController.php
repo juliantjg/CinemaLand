@@ -7,6 +7,11 @@ use App\Menu;
 
 class MenuController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except('index');
+    }
+
     public function index()
     {
         $cinema = Menu::find(1);
@@ -14,8 +19,32 @@ class MenuController extends Controller
         return view('home', compact('movieposts', 'cinema'));
     }
 
-    public function edit()
+    public function edit(Menu $cinema)
     {
+        return view('cover', compact('cinema'));
+    }
+
+    public function store()
+    {
+        $data = request()->validate([
+            'cover' => 'required',
+        ]);
+
+        $imagePath = request('cover')->store('cover', 'public');
+
+        $imageArray = ['cover' => $imagePath];
+
+
+        // dd($imageArray);
+
         $cinema = Menu::find(1);
+        $cinema->update(array_merge(
+            $data,
+            $imageArray ?? []
+        ));
+
+        // dd($cinema->coverImage());
+
+        return redirect('/home/');
     }
 }

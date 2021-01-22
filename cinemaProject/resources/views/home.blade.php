@@ -9,7 +9,7 @@
         </div>
         <div class="col-10 align-content-center bg-tranparent">
             <center>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/1200px-Lisbon_%2836831596786%29_%28cropped%29.jpg"
+            <img src="storage/{{ $cinema->cover }}"
             style="max-width: 780px; max-height: 500px; min-height: 500px;" alt="">
             </center>
         </div>
