@@ -4,7 +4,7 @@
 
 
 <div class="container">
-    <form action="/addMovie" enctype="multipart/form-data" method="post">
+    <form action="/addMovie/create" enctype="multipart/form-data" method="post">
         @csrf
 
         <div class="row">

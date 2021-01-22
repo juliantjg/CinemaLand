@@ -73,7 +73,7 @@
                                             </a>
                                         </div>
                                         <div>
-                                            <a class="dropdown-item" href="/editCover/edit">
+                                            <a class="dropdown-item" href="/editCover/create">
                                                 Edit Cover Image
                                             </a>
                                         </div>

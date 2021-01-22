@@ -9,7 +9,7 @@
         </div>
         <div class="col-10 align-content-center bg-tranparent">
             <center>
-            <img src="storage/{{ $cinema->cover }}"
+            <img src="{{ $cinema->coverImage() }}"
             style="max-width: 780px; max-height: 500px; min-height: 500px;" alt="">
             </center>
         </div>

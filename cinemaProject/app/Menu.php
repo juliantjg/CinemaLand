@@ -16,7 +16,7 @@ class Menu extends Model
     //Initial/default cover image
     public function coverImage()
     {
-        $imagePath = ($this->cover) ? $this->image : 'profile/gy2M17L7jBRaxhnyBWbPrwC6uWbfuGoGAemwsnFQ.png';
+        $imagePath = ($this->cover) ? $this->cover : 'cover/rk2IJGqYkNIML3nNrzN58FlAOTpqh5o2oGaWeghR.png';
         return '/storage/' . $imagePath;
     }
 }

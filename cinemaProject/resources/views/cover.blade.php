@@ -4,7 +4,7 @@
 
 
 <div class="container">
-    <form action="/editCover" enctype="multipart/form-data" method="post">
+    <form action="/editCover/create" enctype="multipart/form-data" method="post">
         @csrf
 
         <div class="row">

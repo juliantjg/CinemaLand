@@ -17,7 +17,7 @@
                 <form action="/movie/destroy" method="POST">
                     @csrf
                     <input class="invisible" type="hidden" type="number" name="movie_id" value="{{ $moviePost->id }}">
-                    <input class="btn btn-outline-light" type="submit" value="Delete Movie;">
+                    <input class="btn btn-outline-light" type="submit" value="Delete Movie">
                 </form>
             <?php } ?>
         </div>
