@@ -31,8 +31,6 @@ class ProfilesController extends Controller
             'image' => '',
         ]);
 
-
-
         //If request receives an image then cut the image using image intervention and save it 
         if (request('image')) {
             $imagePath = request('image')->store('profile', 'public');

@@ -13,4 +13,9 @@ class MenuController extends Controller
         $movieposts = $cinema->MoviePosts()->paginate(8);
         return view('home', compact('movieposts', 'cinema'));
     }
+
+    public function edit()
+    {
+        $cinema = Menu::find(1);
+    }
 }

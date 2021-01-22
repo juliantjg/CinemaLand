@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\MoviePostsController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,5 +24,7 @@ Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/addMovie/create', 'MoviePostsController@create');
 Route::get('/movie/{moviePost}', 'MoviePostsController@show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
+Route::get('/editCover', 'MenuController@edit');
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
 Route::post('/addMovie', 'MoviePostsController@store');
+Route::post('/movie/destroy', 'MoviePostsController@destroy');

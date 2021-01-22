@@ -11,8 +11,8 @@ class MoviePostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('index');
-        $this->middleware('admin')->except('index');
+        $this->middleware('auth');
+        $this->middleware('admin')->except('show');
     }
 
     public function create()
@@ -52,5 +52,18 @@ class MoviePostsController extends Controller
     public function show(\App\MoviePost $moviePost)
     {
         return view('posts.show', compact('moviePost'));
+    }
+
+    public function destroy()
+    {
+        $movie_id = request()->movie_id;
+        $movieItem = MoviePost::find($movie_id);
+        $former_name = $movieItem->movie_name;
+
+        $movieItem->delete();
+
+        return redirect('/home/')->with([
+            'message_success' => "Movie " . $former_name . " was deleted."
+        ]);
     }
 }
