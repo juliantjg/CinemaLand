@@ -14,11 +14,22 @@
             <p style="color: white;"><a href="{{ $moviePost->url }}"> IMDB Link </a></p>    
 
             <?php if(Auth::user()->role == "admin") { ?>
+
                 <form action="/movie/destroy" method="POST">
                     @csrf
                     <input class="invisible" type="hidden" type="number" name="movie_id" value="{{ $moviePost->id }}">
                     <input class="btn btn-outline-light" type="submit" value="Delete Movie">
                 </form>
+
+            <?php } else { ?>
+                
+                <form action="/stripe" method="GET">
+                    @csrf
+                    <input class="invisible" type="hidden" type="text" name="movie_name" value="{{ $moviePost->movie_name }}">
+                    <input class="invisible" type="hidden" type="number" name="price" value="{{ $moviePost->price }}">
+                    <input class="btn btn-outline-light" type="submit" value="Purchase Movie">
+                </form>
+
             <?php } ?>
         </div>
     </div>

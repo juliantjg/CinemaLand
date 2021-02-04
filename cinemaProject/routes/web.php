@@ -29,3 +29,6 @@ Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.upda
 Route::post('/editCover/create', 'MenuController@store');
 Route::post('/addMovie/create', 'MoviePostsController@store');
 Route::post('/movie/destroy', 'MoviePostsController@destroy');
+
+Route::get('/stripe', 'StripePaymentController@stripe');
+Route::post('/stripe', 'StripePaymentController@stripePost')->name('stripe.post');

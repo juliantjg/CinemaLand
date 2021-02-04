@@ -4,15 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card bg-dark">
+                <div class="card-header bg-secondary" style="color: white;">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right" style="color: white;">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" 
@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right" style="color: white;">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" 
@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right" style="color: white;">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="color: white;">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" 
@@ -66,17 +66,19 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+                            <label for="role" class="col-md-4 col-form-label text-md-right" style="color: white;">{{ __('Role') }}</label>
 
-                            <div class="col-md-6 pt-2">
+                            <div class="col-md-6 pt-2 d-flex">
 
                                 <input type="radio" name="role"
                                     <?php if (isset($role) && $role=="admin") echo "checked";?>
-                                value="admin" class="@error('role') is-invalid @enderror">Admin
-
-                                <input type="radio" name="role"
-                                    <?php if (isset($role) && $role=="user") echo "checked";?>
-                                value="user" class="@error('role') is-invalid @enderror">User
+                                value="admin" class="@error('role') is-invalid @enderror"> <div style="color: white;"> Admin </div> 
+                                
+                                <div class="d-flex pl-3">
+                                    <input type="radio" name="role"
+                                        <?php if (isset($role) && $role=="user") echo "checked";?>
+                                    value="user" class="@error('role') is-invalid @enderror"> <div style="color: white;"> User </div> 
+                                </div>
 
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">
@@ -88,7 +90,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-outline-light">
                                     {{ __('Register') }}
                                 </button>
                             </div>
