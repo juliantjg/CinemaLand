@@ -4,6 +4,13 @@
 
 
 <div class="container">
+    <div class="pb-2">
+        @if (session('message_success'))
+            <div class="alert alert-success">
+                {{ session('message_success') }}
+            </div>
+        @endif
+    </div>
     <div class="row">
         <div class="col pb-3">
         </div>

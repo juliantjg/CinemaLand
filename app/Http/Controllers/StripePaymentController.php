@@ -30,8 +30,9 @@ class StripePaymentController extends Controller
             "description" => "Test payment from itsolutionstuff.com."
         ]);
 
-        Session::flash('success', 'Payment successful!');
 
-        return redirect("/home");
+        return redirect('/home/')->with([
+            'message_success' => "Purchase successful!"
+        ]);
     }
 }
