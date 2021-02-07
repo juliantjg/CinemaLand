@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="d-flex col-8">
-                        <label for="image" class="col-md-4 col-form-label" style="color: white;">Image/Poster :</label>
+                        <label for="image" class="col-md-4 col-form-label" style="color: white;">Image/Poster (Must be a .png file):</label>
                         <input type="file" class="form-control-file pt-1" id="image" name="image" style="color: white;">
                         
                         @error('image')
