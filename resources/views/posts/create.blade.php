@@ -57,16 +57,14 @@
                 </div>
     
                 <div class="row">
-                    <div class="col-2"></div>
-                    <div class="d-flex col-8">
-                        <label for="image" class="col-md-4 col-form-label" style="color: white;">Image/Poster (Must be a .png file):</label>
+                    <div class="d-flex col-12">
+                        <label for="image" class="col-md-4 col-form-label" style="color: white;">Image/Poster (must be png file):</label>
                         <input type="file" class="form-control-file pt-1" id="image" name="image" style="color: white;">
                         
                         @error('image')
                         <strong style="color: white">{{ $message }}</strong>
                         @enderror
                     </div>
-                    <div class="col-2"></div>
                 </div>
 
                 <div class="row pt-5 d-flex justify-content-center">
