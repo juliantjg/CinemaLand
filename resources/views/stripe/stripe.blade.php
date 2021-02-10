@@ -71,6 +71,8 @@
                         </div>
 
                         <input class="invisible" type="hidden" type="number" name="price" value="{{ $price }}">
+
+                        <input class="invisible" type="hidden" type="text" name="movie_name" value="{{ $movie_name }}">
   
                         <div class="row justify-content-center">
                             <div class="col-xs-12">

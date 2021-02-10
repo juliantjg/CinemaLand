@@ -12,15 +12,11 @@
         @endif
     </div>
     <div class="row">
-        <div class="col pb-3">
-        </div>
-        <div class="col-10 align-content-center bg-tranparent">
+        <div class="col-12 align-content-center bg-tranparent">
             <center>
             <img src="{{ $cinema->coverImage() }}"
-            style="max-width: 780px; max-height: 500px; min-height: 500px;" alt="">
+            style="max-width: 1000px; max-height: 500px; min-height: 500px;" alt="">
             </center>
-        </div>
-        <div class="col">
         </div>
     </div>
 
