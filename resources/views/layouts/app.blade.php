@@ -34,7 +34,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                    </ul>
 
+                    <ul class="navbar-nav">
+                        <form action="/search" method="get">
+                            @csrf
+                            <div class="d-flex">
+                                <input type="text" class="form-control" name="searchtext" placeholder="Search Movie">
+                                <div class="pl-2">
+                                    <button class="btn btn-outline-light">Go</button>
+                                </div>
+                            </div>
+                        </form>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

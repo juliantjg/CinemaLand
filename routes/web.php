@@ -30,5 +30,7 @@ Route::post('/editCover/create', 'MenuController@store');
 Route::post('/addMovie/create', 'MoviePostsController@store');
 Route::post('/movie/destroy', 'MoviePostsController@destroy');
 
+Route::get('/search', 'MoviePostsController@search');
+
 Route::get('/stripe', 'StripePaymentController@stripe');
 Route::post('/stripe', 'StripePaymentController@stripePost')->name('stripe.post');

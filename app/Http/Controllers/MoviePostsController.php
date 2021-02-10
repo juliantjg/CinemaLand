@@ -66,4 +66,12 @@ class MoviePostsController extends Controller
             'message_success' => "Movie " . $former_name . " was deleted."
         ]);
     }
+
+    public function search()
+    {
+        $search_text = request()->searchtext;
+        $movies = MoviePost::where('movie_name', 'LIKE', '%' . $search_text . '%')->get();
+
+        return view('search.search', compact('movies', 'search_text'));
+    }
 }
