@@ -44,6 +44,14 @@ class MenuController extends Controller
         //     $imageArray ?? []
         // ));
 
-        return redirect('/home/');
+        // return redirect('/home/')->with([
+        //     'message_success' => "Cover updated"
+        // ]);
+
+
+        //Comment below if image upload available on deployment
+        return redirect('/home/')->with([
+            'message_success' => "Cover not updated (Check source code or GitHub page)"
+        ]);
     }
 }

@@ -22,17 +22,32 @@ class MoviePostsController extends Controller
 
     public function store()
     {
+
+        // Comment below if image upload available on deployment
         $data = request()->validate([
             'menu_id' => '1',
             'movie_name' => 'required',
             'price' => 'required',
             'url' => 'required',
-            'image' => ['required', 'image'],
         ]);
+
+        // Uncomment below if image upload available on deployment
+        // $data = request()->validate([
+        //     'menu_id' => '1',
+        //     'movie_name' => 'required',
+        //     'price' => 'required',
+        //     'url' => 'required',
+        //     'image' => ['required', 'image'],
+        // ]);
+
 
         $cinema = Menu::find(1);
 
-        $imagePath = request('image')->store('uploads', 'public');
+        //Comment below if image upload available on deployment
+        $imagePath = "uploads/SKiMQAfNsR6yX2O1Dhy2C9iiRtIOtVzpeUsPoePC.png";
+
+        //Uncomment below if image upload available on deployment
+        // $imagePath = request('image')->store('uploads', 'public');
 
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1500);
         $image->save();
@@ -45,8 +60,9 @@ class MoviePostsController extends Controller
             'image' => $imagePath
         ]);
 
-
-        return redirect('/home/');
+        return redirect('/home/')->with([
+            'message_success' => "Movie added"
+        ]);
     }
 
     public function show(\App\MoviePost $moviePost)

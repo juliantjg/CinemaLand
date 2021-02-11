@@ -61,7 +61,7 @@
                         <label for="image" class="col-md-4 col-form-label" style="color: white;">Image/Poster (must be png file):</label>
 
                         {{-- Comment below if image input is available on deployment --}}
-                         <div class="pt-1">
+                        <div class="pt-1">
                             <h4 style="color: yellow;">Image upload unavailable on Heroku (Check src code or github)</h4>
                         </div>
 
