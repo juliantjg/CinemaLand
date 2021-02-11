@@ -8,9 +8,37 @@ http://cinemaland.herokuapp.com/home
 ## Functionalities
 
 On the register account page user would need to choose a role:
-![](https://imgur.com/ocuCuj5)
+
+![](https://i.imgur.com/ocuCuj5.png)
 
 ### 1. Account Roles
 
+Every account has the ability to update their profile
+
+![](https://i.imgur.com/FDJNDHX.png)
+
 #### 1.1 Admin
 An admin account is able to edit the website's cover image, add movies to the website by providing a poster, name, price and an IMDB link.
+
+![](https://i.imgur.com/kNyLdFS.png)
+
+Admin can also delete a movie
+
+![](https://i.imgur.com/W1ftoKZ.png)
+
+#### 1.2 User
+A user account is able to purchase a movie
+
+![](https://i.imgur.com/INMS5L4.png)
+
+#### 1.3 Not logged in 
+Without logging in, the web only provides the search functionality:
+![](https://i.imgur.com/eN41JXH.png)
+
+## Deploying on Heroku
+
+Uploading images is not available since deploying on Heroku also requires me having a clout storage such as AWS S3, hence movies added to the website will have image unavailable as the poster and cover image and profile picture aren't available for update.
+
+![](https://i.imgur.com/GLSqIbC.png)
+
+The original code providing image uploads can be found on the [main](https://github.com/juliantjg/CinemaLand/tree/main) branch, while the deployed version (no image uploads) can be found on the [herokuDeployment](https://github.com/juliantjg/CinemaLand/tree/herokuDeployment) branch.
