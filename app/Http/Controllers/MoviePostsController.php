@@ -12,7 +12,7 @@ class MoviePostsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('admin')->except('show');
+        $this->middleware('admin')->except('show', 'search');
     }
 
     public function create()
