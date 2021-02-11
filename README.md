@@ -39,10 +39,15 @@ Without logging in, the web only provides the search functionality:
 ## Purchasing a movie test
 
 The web app provides payment via Stripe Test Mode.
+
 Data to test:
+
 Name on Card: Anything
+
 Card Number: 4242 4242 4242 4242
+
 CVC: Any three digits number
+
 Expiration Month/Expiration Year: Any date starting today
 
 ## Deploying on Heroku
