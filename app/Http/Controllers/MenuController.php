@@ -21,29 +21,28 @@ class MenuController extends Controller
 
     public function edit(Menu $cinema)
     {
+        $cinema = Menu::find(1);
         return view('cover', compact('cinema'));
     }
 
     public function store()
     {
-        $data = request()->validate([
-            'cover' => 'required',
-        ]);
 
-        $imagePath = request('cover')->store('cover', 'public');
+        // UNCOMMENT BELOW FOR IMAGE UPLOAD (If image upload is available on deployment)
 
-        $imageArray = ['cover' => $imagePath];
+        // $data = request()->validate([
+        //     'cover' => 'required',
+        // ]);
 
+        // $imagePath = request('cover')->store('cover', 'public');
 
-        // dd($imageArray);
+        // $imageArray = ['cover' => $imagePath];
 
-        $cinema = Menu::find(1);
-        $cinema->update(array_merge(
-            $data,
-            $imageArray ?? []
-        ));
-
-        // dd($cinema->coverImage());
+        // $cinema = Menu::find(1);
+        // $cinema->update(array_merge(
+        //     $data,
+        //     $imageArray ?? []
+        // ));
 
         return redirect('/home/');
     }

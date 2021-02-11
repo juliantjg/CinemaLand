@@ -59,11 +59,19 @@
                 <div class="row">
                     <div class="d-flex col-12">
                         <label for="image" class="col-md-4 col-form-label" style="color: white;">Image/Poster (must be png file):</label>
-                        <input type="file" class="form-control-file pt-1" id="image" name="image" style="color: white;">
+
+                        {{-- Comment below if image input is available on deployment --}}
+                         <div class="pt-1">
+                            <h4 style="color: yellow;">Image upload unavailable on Heroku (Check src code or github)</h4>
+                        </div>
+
+                        {{-- Uncomment below for image input (If image input is available on deployment) --}}
+                        {{-- <input type="file" class="form-control-file pt-1" id="image" name="image" style="color: white;">
                         
                         @error('image')
                         <strong style="color: white">{{ $message }}</strong>
-                        @enderror
+                        @enderror --}}
+                        
                     </div>
                 </div>
 
