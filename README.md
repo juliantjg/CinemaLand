@@ -35,6 +35,16 @@ A user account is able to purchase a movie
 Without logging in, the web only provides the search functionality:
 ![](https://i.imgur.com/eN41JXH.png)
 
+
+## Purchasing a movie test
+
+The web app provides payment via Stripe Test Mode.
+Data to test:
+Name on Card: Anything
+Card Number: 4242 4242 4242 4242
+CVC: Any three digits number
+Expiration Month/Expiration Year: Any date starting today
+
 ## Deploying on Heroku
 
 Uploading images is not available since deploying on Heroku also requires me having a clout storage such as AWS S3, hence movies added to the website will have image unavailable as the poster and cover image and profile picture aren't available for update.
