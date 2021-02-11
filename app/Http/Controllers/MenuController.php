@@ -45,6 +45,8 @@ class MenuController extends Controller
 
         // dd($cinema->coverImage());
 
-        return redirect('/home/');
+        return redirect('/home/')->with([
+            'message_success' => "Cover updated"
+        ]);
     }
 }

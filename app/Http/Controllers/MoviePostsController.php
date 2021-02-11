@@ -11,7 +11,7 @@ class MoviePostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('search');
         $this->middleware('admin')->except('show');
     }
 
@@ -45,8 +45,9 @@ class MoviePostsController extends Controller
             'image' => $imagePath
         ]);
 
-
-        return redirect('/home/');
+        return redirect('/home/')->with([
+            'message_success' => "Movie added"
+        ]);
     }
 
     public function show(\App\MoviePost $moviePost)
