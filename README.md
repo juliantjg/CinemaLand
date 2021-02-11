@@ -42,3 +42,7 @@ Uploading images is not available since deploying on Heroku also requires me hav
 ![](https://i.imgur.com/GLSqIbC.png)
 
 The original code providing image uploads can be found on the [main](https://github.com/juliantjg/CinemaLand/tree/main) branch, while the deployed version (no image uploads) can be found on the [herokuDeployment](https://github.com/juliantjg/CinemaLand/tree/herokuDeployment) branch.
+
+## License
+
+The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
