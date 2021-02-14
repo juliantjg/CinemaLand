@@ -58,7 +58,7 @@ Expiration Month/Expiration Year: Any date starting today
 
 ## Deploying on Heroku
 
-Uploading images is not available since deploying on Heroku also requires me having a clout storage such as AWS S3, hence movies added to the website will have image unavailable as the poster and cover image and profile picture aren't available for update.
+Uploading images is not available since deploying on Heroku also requires me having a clout storage such as AWS S3, hence movies added to the website will have image unavailable as the poster and cover image and profile picture aren't available for update. Admin can still add movies, though it won't upload the cover.
 
 ![](https://i.imgur.com/GLSqIbC.png)
 
