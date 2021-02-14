@@ -13,6 +13,7 @@ On the register account page user would need to choose a role:
 
 Testing account: 
 Admin -> admin@cinemaland.com, password: asdaasda
+
 User -> user@cinemaland.com, password: asdaasda
 
 ### 1. Account Roles
