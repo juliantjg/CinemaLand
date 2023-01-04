@@ -3,7 +3,7 @@
 ## Welcome
 
 Cinema Land is movie vendor web app made using Laravel framework. Access the deployed website on Heroku here: 
-http://cinemaland.herokuapp.com/home
+http://cinemaland.herokuapp.com/home (link no longer works; Heroku no longer provides free services)
 
 ## Functionalities
 
